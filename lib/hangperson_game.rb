@@ -105,8 +105,14 @@ word = banana
   end
   
   def check_win_or_lose
-    
-    if @guesses.split('').sort.join('')==@word.split('').sort.join('')
+    w=true
+    @word.each_char do |x|
+      if !@guesses.include?(x)
+        w=false
+        break
+      end
+    end
+    if w==true
       return :win
     end
     
