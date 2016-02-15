@@ -78,22 +78,16 @@ class HangpersonApp < Sinatra::Base
   
   get '/win' do
     ### YOUR CODE HERE ###
-    retval=@game.check_win_or_lose
-    if retval==:win
-      erb :win
-    else
+    
       erb :show # You may change/remove this line
-    end
+    
   end
   
   get '/lose' do
     ### YOUR CODE HERE ###
-    retval=@game.check_win_or_lose
-    if retval==:lose
-      erb :lose
-    else
+    
       erb :show # You may change/remove this line
-    end
+  
   end
   
 end
