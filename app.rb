@@ -66,9 +66,9 @@ class HangpersonApp < Sinatra::Base
     ### YOUR CODE HERE ###
     retval=@game.check_win_or_lose
     if retval==:win
-      redirect '/win'
+      erb :win
     elsif retval==:lose
-      redirect '/lose'
+      erb :lose
     else
       erb :show
     end
